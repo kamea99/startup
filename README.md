@@ -19,3 +19,10 @@ Does this sound like you? The new year begins and you brainstorm goals to become
 
 ### Technologies
 
+- HTML: Will use correct HTML to structure the application. WIll use at least one HTML page, for login.
+- CSS: The application will be colorful and styling will resemble a bullet journal. Application will look good and be intuitive to use.
+- JavaScript: Application will display a welcome screen/login, as well as a page for tracking habits and another for tracking mood, a home page will also be displayed. 
+- Service: The application will store and retrieve login information. Application will display an inspirational quote taken from the service.
+- DB/Login: Application will store user information, a username and password. User cannot access tracking tools without previous authentication/login.
+- WebSocket: When a new habit is added, user will receive a push notification as feedback. (Possibly when they log their mood as well)
+- React: Application will use the React web framework.
