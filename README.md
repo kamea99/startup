@@ -7,3 +7,4 @@ Does this sound like you? The new year begins and you brainstorm goals to become
 
 ### Design
 
+![Startup Rough Drawing](https://github.com/kamea99/startup/assets/135865953/dc3206f2-fb95-4fec-811d-b436136dd490)
