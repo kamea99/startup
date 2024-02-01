@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login page</title>
+    </head>
+    <body>
+        <header>
+            <h1><b>My Habit Tracker</b></h1>
+        
+            <nav>
+                <menu>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </menu>
+            </nav>
+        </header>
+
+        <main>
+
+            <p>Login to begin tracking</p>
+            <form method="get" action="tracker.html">
+                
+                <!--fix bullet points before the username and password inputs-->
+                <li>
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" placeholder="username"/>
+                </li>
+
+                <li>
+                    <label for="password">Password: </label>
+                    <input type="text" id="password" placeholder="password"/>
+                </li>
+                
+                <button type="login">Login</button>
+            </form>
+            <p>
+                Don't have an account?
+                <a href="account.html">Create an account!</a>
+            </p>
+        </main>
+    </body>
+</html>
