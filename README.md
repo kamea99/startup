@@ -26,3 +26,12 @@ Does this sound like you? The new year begins and you brainstorm goals to become
 - DB/Login: Application will store user information, a username and password. User cannot access tracking tools without previous authentication/login.
 - WebSocket: When a new habit is added, user will receive a push notification as feedback. (Possibly when they log their mood as well)
 - React: Application will use the React web framework.
+
+# HTML Deliverable
+
+- HTML: an individual HTML page for a home page, login page, to create an account, tell about the website, and a page for the tracker itself.
+- Links: The home page links to both the login page and the create an account page. These pages both link to the tracker. 
+- Text: The product has a textual description in the about page. 
+- Table: The tracker is made using an interactive table, using checkboxes to mark off the days the habit was completed. Above the table is (will be) also an interactive way to observe the progress from past weeks.
+- Database: The login page contains boxes for the user to input their username and password that was stored. The account page also stored their name and email. The database will also save their progress from past weeks.
+- WebSocket: The website responds with immediate feedback that a new habit was successfully added.
