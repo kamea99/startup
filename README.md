@@ -37,4 +37,4 @@ Does this sound like you? The new year begins and you brainstorm goals to become
 - Table: The tracker is made using an interactive table, using checkboxes to mark off the days the habit was completed. Above the table is (will be) also an interactive way to observe the progress from past weeks.
 - Database: The login page contains boxes for the user to input their username and password that was stored. The account page also stored their name and email. The database will also save their progress from past weeks.
 - WebSocket: The website responds with immediate feedback that a new habit was successfully added.
-- Service calls: The site will use third-party service calls in the about page to iterate through different inspirational quotes.
+- Service calls: The site will use third-party service calls in the about page to iterate through different inspirational quotes. It will also call an outside calender for the tracker.
