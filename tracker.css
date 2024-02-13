@@ -1,3 +1,19 @@
 body {
-    color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
 }
+
+header{
+    flex: 0 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: palevioletred;
+}
+
+.app-name h1{
+    justify-content: start;
+    align-items: center;
+    color:white;
+}
+

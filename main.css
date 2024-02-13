@@ -1,5 +1,57 @@
 body {
     display: flex;
     flex-direction: column;
+    height: 100vh;
     background-color: blanchedalmond;
 }
+
+a {
+    text-decoration: none;
+}
+
+header{
+    display:flex;
+    flex: 0 25px;
+    background-color: aqua;
+}
+
+main{
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex: 0 10px;
+    background-color: brown;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5em;
+    color: white;
+}
+
+footer a {
+    color: grey;
+    padding-right: 0.5em;
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 5em;
+}
+
+menu .nav-item {
+    padding: 0 0.3em;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: green;
+}
+
+.active-nav-link {
+    color:lightslategray;
+}
+
