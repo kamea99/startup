@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: blanchedalmond;
+    background-color: #f7ecc8;
 }
 
 a {
@@ -11,35 +11,14 @@ a {
 
 header{
     display:flex;
-    flex: 0 25px;
-    background-color: aqua;
-}
-
-main{
-    flex: 1;
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
-    flex: 0 10px;
-    background-color: brown;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 0.5em;
-    color: white;
-}
-
-footer a {
-    color: grey;
-    padding-right: 0.5em;
+    flex: 0 30px;
+    background-color: #cd8b62;
 }
 
 menu {
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin-left: 5em;
 }
 
 menu .nav-item {
@@ -48,10 +27,52 @@ menu .nav-item {
 }
 
 .nav-link {
-    color: green;
+    color: #516545;
 }
 
 .active-nav-link {
-    color:lightslategray;
+    color:#b8c7b4;
+}
+
+main{
+    flex: 1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h1 {
+    color: #516545;
+    border: 3px solid #516545;
+    padding: 0.3em;
+    font-family: "Lucida Calligraphy", cursive;
+}
+
+h2 {
+    color: #47573d;
+    font-family: "Lucida Calligraphy", cursive;
+    padding: 0.7em;
+}
+
+button {
+    color:#2c3527;
+    background-color: #aeb9a7;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex: 0 10px;
+    background-color: #aeb9a7;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5em;
+    color: #3b4734;
+}
+
+footer a {
+    color: #3b4734;
+    padding-right: 0.5em;
 }
 
