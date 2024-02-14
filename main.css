@@ -64,6 +64,7 @@ h1 {
     border: 3px solid #516545;
     padding: 0.3em;
     font-family: "Lucida Calligraphy", cursive;
+    font-weight: bold;
 }
 
 h2 {
@@ -74,7 +75,6 @@ h2 {
 }
 
 button {
-    /*color:#aeb9a7;*/
     color:#2c3527;
     background-color: #aeb9a7;
     border-color: 2px solid #2c3527;
