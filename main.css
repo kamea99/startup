@@ -28,10 +28,16 @@ menu .nav-item {
 
 .nav-link {
     color: #516545;
+    &:hover {
+        color:#304127;
+    }
 }
 
 .active-nav-link {
     color:#b8c7b4;
+    &:hover {
+        color:#304127;
+    }
 }
 
 main{
@@ -40,6 +46,17 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items:center;
+}
+
+main p {
+    padding-top: 2em;
+}
+
+main a {
+    color: #cb885f;
+    &:hover {
+        color:#774221;
+    }
 }
 
 h1 {
@@ -51,13 +68,30 @@ h1 {
 
 h2 {
     color: #47573d;
+    font-size: 40px;
     font-family: "Lucida Calligraphy", cursive;
     padding: 0.7em;
 }
 
 button {
+    /*color:#aeb9a7;*/
     color:#2c3527;
     background-color: #aeb9a7;
+    border-color: 2px solid #2c3527;
+
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 40px;
+    width: 130px;
+    height: 40px;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+        color:white;
+        background: #3d4837;
+    }
 }
 
 footer {
@@ -69,10 +103,14 @@ footer {
     align-items: center;
     padding-left: 0.5em;
     color: #3b4734;
+    font-size: 15px;
 }
 
 footer a {
     color: #3b4734;
     padding-right: 0.5em;
+    &:hover {
+        color:#ced1cc;
+    }
 }
 
