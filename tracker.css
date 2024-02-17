@@ -40,6 +40,20 @@ menu .nav-item {
     }
 }
 
+.habits {
+    background-color: #efe3b8;
+    padding: 10px;
+    border: 1px solid #a6924c;
+    border-radius: 7px;
+}
+
+th, td {
+    color: #504313;
+    padding: 0.5em;
+}
+
+
+
 main{
     flex: 1;
     display:flex;
