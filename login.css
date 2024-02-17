@@ -49,12 +49,57 @@ main{
     align-items:center;
 }
 
+.login-info {
+    padding: 0.3em;
+}
+
+main button {
+    color:#2c3527;
+    background-color: #aeb9a7;
+    border-color: 2px solid #2c3527;
+
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 40px;
+    width: 100px;
+    height: 30px;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+        color:white;
+        background: #3d4837;
+    }
+}
+
+.login-button {
+    padding-top:0.7em;
+}
+
+main a {                    /*create your account button*/
+    padding-top: 0.5em;
+    color: #cb885f;
+    &:hover {
+        color:#774221;
+    }
+}
+
 h1 {
     color: #516545;
     border: 3px solid #516545;
     padding: 0.3em;
     font-family: "Lucida Calligraphy", cursive;
     font-weight:bold;
+}
+
+h2 {
+    color: #47573d;
+    font-size: 35px;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
