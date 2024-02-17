@@ -47,6 +47,13 @@ menu .nav-item {
     border-radius: 7px;
 }
 
+button {
+    border-radius: 5px;
+    color:#2a3a22;
+    background-color: #94a68a;
+    padding: 0.5em;
+}
+
 th, td {
     color: #504313;
     padding: 0.5em;
