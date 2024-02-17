@@ -40,6 +40,24 @@ menu .nav-item {
     }
 }
 
+h1 {
+    color: #516545;
+    border: 3px solid #516545;
+    padding: 0.3em;
+    font-family: "Lucida Calligraphy", cursive;
+    font-weight: bold;
+}
+
+h2 {
+    color: #516545;
+    font-weight: bold;
+}
+
+.container p {
+    color: #516545; 
+    
+}
+
 main{
     flex: 1;
     display:flex;
@@ -48,13 +66,59 @@ main{
     align-items:center;
 }
 
-h1 {
-    color: #516545;
-    border: 3px solid #516545;
-    padding: 0.3em;
-    font-family: "Lucida Calligraphy", cursive;
-    font-weight: bold;
-}
+input[type=text], input[type=password] {
+    padding: 0.7em;
+    margin: 5px 0 22px 0;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  button {
+    opacity: 1;
+
+    color: white;
+    background-color: #58694e;
+    border-color: 2px solid #2c3527;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 40px;
+    width: 150px;
+    height: 40px;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+    float: left;
+  }
+  
+  button:hover {
+    opacity:0.8;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .submitbtn {
+      width: 100%;
+    }
+  }
 
 footer {
     display: flex;

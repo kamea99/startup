@@ -49,11 +49,12 @@ main{
     align-items:center;
 }
 
-.login-info {
+.login-info {           /*username/password boxes*/
     padding: 0.3em;
+    border-radius: 5px;
 }
 
-main button {
+main button {           /*submit button*/
     color:#2c3527;
     background-color: #aeb9a7;
     border-color: 2px solid #2c3527;
@@ -73,7 +74,7 @@ main button {
     }
 }
 
-.login-button {
+.login-button {             
     padding-top:0.7em;
 }
 

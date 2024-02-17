@@ -32,44 +32,31 @@
         </header>
 
         <main>
-            <p>Fill out the following prompts and click create to start your journey!</p>
-            <form method="get" action="tracker.html">
-                <h3><b>Personal Info</b></h3>
-                <label for="firstname">First Name: </label>
-                <input for="text" id="firstname"/>
-                <br>
-                <label for="lastname">Last Name: </label>
-                <input type="text" id="lastname"/>
-                <br>
-                <label for="email">Email: </label>
-                <input type="text" id="email"/>
-                <br>
-                <br>
-                <h3><b>Create Login</b></h3>
-                <label for="username">Username: </label>
-                <input type="text" id="username"/>
-                <br>
-                <label for="password">Password: </label>
-                <input type="text" id="password"/>
+            <form action="tracker.html">
+                <div class="container">
+                  <h2>Sign Up</h2>
+                  <p>Fill out the following prompts and click create to start your journey!</p>
+                  <hr>
+              
+                  <label for="firstName">First Name</label>
+                  <input type="text" placeholder="Enter Your First Name" name="firstName" required>
 
-                <br>
-                <button type="create">Create!</button>
-            </form>
+                  <label for="lastName">Last Name</label>
+                  <input type="text" placeholder="Enter Your Last Name" name="lastName" required>
 
-            <form>
-                <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              
+                  <label for="username">Create Username</label>
+                  <input type="text" placeholder="Enter Username" name="username" required>
+
+                  <label for="psw">Create Password</label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+
+                  <div class="submit">
+                    <button type="submit" class="submitbtn">Submit!</button>
                   </div>
+
                 </div>
-                <div class="form-group row">
-                  <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                  </div>
-                </div>
-            </form>
+              </form>
         </main>
 
         <footer>
