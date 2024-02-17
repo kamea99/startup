@@ -45,3 +45,4 @@ Does this sound like you? The new year begins and you brainstorm goals to become
 - All windows are responsive to resizing.
 - Colors are pleasing and consistent throughout the web pages
 - Text is presented in a pleasing way.
+- Images are prominently presented and add a fun feeling to the page.
