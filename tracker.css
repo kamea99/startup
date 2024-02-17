@@ -52,7 +52,26 @@ th, td {
     padding: 0.5em;
 }
 
+.week {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:0.3em;
+}
 
+.week p {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.week button {
+    border-radius: 5px;
+    color:#182113;
+    background-color: #94a68a;
+    padding: 
+}
 
 main{
     flex: 1;
