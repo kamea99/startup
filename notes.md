@@ -10,5 +10,5 @@ Load fonts from Google using - @import url('https://fonts.googleapis.com/css?fam
 
 flex-direction: column-reverse; would put the p elements in a column and flip it
 
-Link CSS to HTML - <link rel="stylesheet" href="name.css" />
+Link CSS to HTML - /<link rel="stylesheet" href="name.css" />
   
