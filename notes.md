@@ -9,4 +9,6 @@ Here's the [link](http://3.224.181.5/) to my startup :)
 Load fonts from Google using - @import url('https://fonts.googleapis.com/css?famiy=Quicksand');
 
 flex-direction: column-reverse; would put the p elements in a column and flip it
+
+Link CSS to HTML - <link rel="stylesheet" href="name.css" />
   
