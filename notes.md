@@ -225,3 +225,89 @@ Object Types:
 - Map - new Map()
 - JSON - {"a":3, "b":"fish"}
 
+Object functions]
+- entries - Returns an array of key value pairs
+- keys - Returns and array of keys
+- values - Returns an array of values
+
+Example:
+```
+const obj = {
+  a: 3,
+  b: 'fish',
+};
+
+console.log(Object.entries(obj));
+//OUTPUT: [['a',3'], ['b', 'fish']]
+console.log(Object.keys(obj));
+// OUTPUT: ['a', 'b']
+console.log(Object.values(obj));
+// OUTPUT: [3, 'fish']
+```
+
+Rest - last parameter prefixed with ... to have the function take in an unknown number of parameters
+
+Example:
+```
+function hasTwo(a, b, c) {
+  return hasNumber(2, [a, b, c]);
+}
+
+function hasNumber(test, ...numbers) {
+  reutrn numbers.some((i) => i === test);
+}
+hasNumber(2, 1, 2, 3);
+//RETURNS: true
+```
+
+Spread - opposite of rest, takes an object that is iterable and expands it into a function's parameters
+
+Example:
+```
+function person(firstName, lastName) {
+  return {first: firstNAme, last: lastName };
+
+const p = person(...['Ryan', 'Dahl']);
+console.log(p);
+output: {first: 'Ryan', last: 'Dahl'}
+}
+```
+
+Destructuring - pull existing items out of a previous structure
+
+Examples:
+```
+const a = [1, 2, 3, 4];
+const [b, c] = a;
+console.log(b, c);
+// OUTPUT: 1, 2
+
+OR
+
+const [b, c, ...others] = a;
+console.log(b, c, others);
+// OUTPUT: 1, 2, [4,5]
+
+OR
+
+const o = { a: 1, b: 'animals', c: ['fish', 'cats'] };
+const { a, c } = o;
+console.log(a, c);
+// OUTPUT 1, ['fish', 'cats']
+```
+
+Scope
+- Global: visible to all code
+- Module: visible to all code running in a module
+- Function: visible within a function
+- Block: visible withing a block of code delimited by curly braces
+
+DOM - Document Object Model
+- Iterates child elements, accesses the parent element, and maipulates the element's atributes
+- textContent: sets the child text for the element
+
+LocalStorage
+- setItem(name, value) - Sets a named item's value into local storage
+- getItem(name)	- Gets a named item's value from local storage
+- removeItem(name) - Removes a named item from local storage
+- clear()	- Clears all items in local storage
