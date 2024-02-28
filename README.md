@@ -38,3 +38,11 @@ Does this sound like you? The new year begins and you brainstorm goals to become
 - Database: The login page contains boxes for the user to input their username and password that was stored. The account page also stored their name and email. The database will also save their progress from past weeks.
 - WebSocket: The website responds with immediate feedback that a new habit was successfully added.
 - Service calls: The site will use third-party service calls in the about page to iterate through different inspirational quotes. It will also call an outside calender for the tracker.
+
+# CSS Deliverable
+- Formatted the header and footer of the page to allow for easy access to each page.
+- All navigation links were changed to different colors, and indicate they are a link by changing color when hovered over by the mouse.
+- All windows are responsive to resizing.
+- Colors are pleasing and consistent throughout the web pages
+- Text is presented in a pleasing way.
+- Images are prominently presented and add a fun feeling to the page.
