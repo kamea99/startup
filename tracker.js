@@ -1,3 +1,12 @@
+function getTrackerName() {
+    return localStorage.getItem('username');
+}
+
+function replaceName() {
+    let playerName = document.getElementById('playerName');
+    playerName.textContent = getTrackerName() + "'s Habits";
+}
+
 // Function to handle form submission and add a new habit to the table
 function addHabit() {
 
@@ -45,9 +54,9 @@ function addHabit() {
     tableBody.appendChild(row);
 }
 
-// Define variables to store the start and end dates of the current week
-let startDate = new Date(2023, 2, 3); // Example start date
-let endDate = new Date(2023, 2, 9); // Example end date
+//Toggle between dates
+let startDate = new Date(2023, 2, 3);
+let endDate = new Date(2023, 2, 9);
 
 // Function to update the displayed week dates
 function updateWeekDates(startDate, endDate) {
@@ -75,3 +84,28 @@ function goToNextWeek() {
     endDate.setDate(endDate.getDate() + 7);
     updateWeekDates(startDate, endDate);
 }
+
+//Notification replacement
+let index = 0;
+let messages = [
+    "*Amazing! You added 'Read in BoM' as a new habit!*",
+    "*Incredible! Keep going*",
+    "*Wow! You're amazing!*",
+    "*Yay!*",
+    "*You added 'Drink Water' as a new habit!*"
+];
+
+setInterval(() => {
+    let notify = document.getElementById("notify");
+    notify.textContent = messages[index];
+    index++;
+    if (index >= messages.length) {
+        index = 0;
+    }
+}, 5000);
+
+//html to get the notification to be closable when I add websocket stuff
+//<div id="notify" class="alert alert-success alert-dismissible fade show" role="alert">
+//    *Amazing! You added "Read in BoM" as a new habit!*
+//    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+//</div>
