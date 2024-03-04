@@ -46,3 +46,9 @@ Does this sound like you? The new year begins and you brainstorm goals to become
 - Colors are pleasing and consistent throughout the web pages
 - Text is presented in a pleasing way.
 - Images are prominently presented and add a fun feeling to the page.
+
+# JavaScript Deliverable
+- login - When you press login or the create account button it redirects you to the tracker page.
+- database - The database keeps track of the past inputs for the tracker, allowing the user to go back and review their progress.
+- WebSocket - There are automatic notifications given depicting a user adding a habit or updating a day. This will be replaced with WebSocket messages later.
+- application logic - The tracker shows each of the days logged and shows up with a new habit when entered.
