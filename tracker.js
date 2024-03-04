@@ -44,3 +44,34 @@ function addHabit() {
     //row.appendChild(cell1);
     tableBody.appendChild(row);
 }
+
+// Define variables to store the start and end dates of the current week
+let startDate = new Date(2023, 2, 3); // Example start date
+let endDate = new Date(2023, 2, 9); // Example end date
+
+// Function to update the displayed week dates
+function updateWeekDates(startDate, endDate) {
+    document.getElementById("weekDates").textContent = formatDate(startDate) + " - " + formatDate(endDate);
+}
+
+// Function to format the date in "MM/DD/YYYY" format
+function formatDate(date) {
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+    let year = date.getFullYear();
+    return month + "/" + day + "/" + year;
+}
+
+// Function to go to the previous week
+function goToPreviousWeek() {
+    startDate.setDate(startDate.getDate() - 7);
+    endDate.setDate(endDate.getDate() - 7);
+    updateWeekDates(startDate, endDate);
+}
+
+// Function to go to the next week
+function goToNextWeek() {
+    startDate.setDate(startDate.getDate() + 7);
+    endDate.setDate(endDate.getDate() + 7);
+    updateWeekDates(startDate, endDate);
+}
