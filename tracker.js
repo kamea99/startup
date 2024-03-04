@@ -1,3 +1,4 @@
+//Update user's name
 function getTrackerName() {
     return localStorage.getItem('username');
 }
@@ -7,17 +8,14 @@ function replaceName() {
     playerName.textContent = getTrackerName() + "'s Habits";
 }
 
-// Function to handle form submission and add a new habit to the table
+// Add a new habit to the table
 function addHabit() {
 
     //habit input value
     let habitInput = document.getElementById("habitIn").value;
     let tableBody = document.getElementById("tableBody");
     let row = document.createElement("tr");
-    
-    //let cell1 = document.createElement("td");
 
-    // Populate the <tr> with habit data
     row.innerHTML = `
         <td>${habitInput}</td>
         <td>
@@ -50,20 +48,96 @@ function addHabit() {
         </td>
     `;
 
-    //row.appendChild(cell1);
     tableBody.appendChild(row);
+    saveHabits();
 }
+
+function saveHabits() {
+    let rows = document.querySelectorAll('#tableBody tr');
+    let habits = [];
+
+    rows.forEach(row => {
+        let habitName = row.children[0].textContent.trim();
+        let days = [];
+
+        let checkboxes = row.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            days.push(checkbox.id);
+        });
+
+        habits.push({habitName, days});
+    });
+
+    localStorage.setItem('habits', JSON.stringify(habits));
+}
+
+function removeExample() {
+    let playerName = document.getElementById('playerName');
+    playerName.textContent = getTrackerName() + "'s Habits";
+}
+
+//Saves the added habit on any reload 
+function loadHabits() {
+    let habits = JSON.parse(localStorage.getItem('habits'));
+    let tableBody = document.getElementById("tableBody");
+
+    // Remove the existing row with the "Example" text
+    let existingRow = tableBody.rows[0];
+    tableBody.removeChild(existingRow);
+
+    if (habits) {
+        habits.forEach(habit => {
+            let row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${habit.habitName}</td>
+                <td>
+                    <label for="${habit.days[0]}"></label>
+                    <input type="checkbox" id="${habit.days[0]}">
+                </td>
+                <td>
+                    <label for="${habit.days[1]}"></label>
+                    <input type="checkbox" id="${habit.days[1]}">
+                </td>
+                <td>
+                    <label for="${habit.days[2]}"></label>
+                    <input type="checkbox" id="${habit.days[2]}">
+                </td>
+                <td>
+                    <label for="${habit.days[3]}"></label>
+                    <input type="checkbox" id="${habit.days[3]}">
+                </td>
+                <td>
+                    <label for="${habit.days[4]}"></label>
+                    <input type="checkbox" id="${habit.days[4]}">
+                </td>
+                <td>
+                    <label for="${habit.days[5]}"></label>
+                    <input type="checkbox" id="${habit.days[5]}">
+                </td>
+                <td>
+                    <label for="${habit.days[6]}"></label>
+                    <input type="checkbox" id="${habit.days[6]}">
+                </td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+    }
+}
+
+window.onload = () => { loadHabits(); }
 
 //Toggle between dates
 let startDate = new Date(2023, 2, 3);
 let endDate = new Date(2023, 2, 9);
 
-// Function to update the displayed week dates
+// Update the displayed week dates
 function updateWeekDates(startDate, endDate) {
     document.getElementById("weekDates").textContent = formatDate(startDate) + " - " + formatDate(endDate);
 }
 
-// Function to format the date in "MM/DD/YYYY" format
+// Format the date to MM/DD/YYYY
 function formatDate(date) {
     let month = date.getMonth() + 1;
     let day = date.getDate();
@@ -71,14 +145,14 @@ function formatDate(date) {
     return month + "/" + day + "/" + year;
 }
 
-// Function to go to the previous week
+// Toggle to the previous week
 function goToPreviousWeek() {
     startDate.setDate(startDate.getDate() - 7);
     endDate.setDate(endDate.getDate() - 7);
     updateWeekDates(startDate, endDate);
 }
 
-// Function to go to the next week
+// Toggle to the next week
 function goToNextWeek() {
     startDate.setDate(startDate.getDate() + 7);
     endDate.setDate(endDate.getDate() + 7);
