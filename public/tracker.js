@@ -71,10 +71,35 @@ function saveHabits() {
     localStorage.setItem('habits', JSON.stringify(habits));
 }
 
-function removeExample() {
-    let playerName = document.getElementById('playerName');
-    playerName.textContent = getTrackerName() + "'s Habits";
+function isChecked() {
+    var checkArr = []
+    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+    
+    for (var i = 0; i < checkboxes.length; i++) {
+      array.push(checkboxes[i].value)
+    }
 }
+/*function isChecked() {
+    let rows = document.querySelectorAll('#tableBody tr');
+    let habits = JSON.parse(localStorage.getItem('habits')) || [];
+
+    rows.forEach((row, index) => {
+        let habitName = row.children[0].textContent.trim();
+        let days = [];
+
+        let checkboxes = row.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox, i) => {
+            days.push(checkbox.id);
+            days.push(checkbox.checked);
+
+            habits[index - 1].days[i * 2 + 1] = checkbox.checked;
+        });
+
+        habits[index - 1].habitName = habitName;
+    });
+
+    localStorage.setItem('habits', JSON.stringify(habits));
+}*/
 
 //Saves the added habit on any reload 
 function loadHabits() {
@@ -82,8 +107,10 @@ function loadHabits() {
     let tableBody = document.getElementById("tableBody");
 
     // Remove the existing row with the "Example" text
-    let existingRow = tableBody.rows[0];
-    tableBody.removeChild(existingRow);
+    if (habits.length >= 1) {
+        let existingRow = tableBody.rows[0];
+        tableBody.removeChild(existingRow);
+    }
 
     if (habits) {
         habits.forEach(habit => {
@@ -107,14 +134,14 @@ function loadHabits() {
                     <label for="${habit.days[3]}"></label>
                     <input type="checkbox" id="${habit.days[3]}">
                 </td>
-                <td>
+    
                     <label for="${habit.days[4]}"></label>
                     <input type="checkbox" id="${habit.days[4]}">
                 </td>
                 <td>
                     <label for="${habit.days[5]}"></label>
                     <input type="checkbox" id="${habit.days[5]}">
-                </td>
+                </td> bg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv   vvvvvvvvv                      vvvvv                      vvvvvvvvvv vvvvvv vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv                       v                                                                                  v                                                                                                                                    
                 <td>
                     <label for="${habit.days[6]}"></label>
                     <input type="checkbox" id="${habit.days[6]}">
@@ -124,9 +151,33 @@ function loadHabits() {
             tableBody.appendChild(row);
         });
     }
+
+    /*if (habits) {
+        habits.forEach(habit => {
+            let row = document.createElement("tr");
+
+            row.innerHTML = `<td>${habit.habitName}</td>`
+
+            for (let i = 0; i < 7; ++i) {
+                let day = habit.days[i * 2];    //skip the checked, only get the day
+                let isChecked = habit.days[i * 2 + 1]; //skip the day, get the checked
+
+                row.innerHTML += `
+                    <td>
+                        <label for="${day}"></label>
+                        <input type="checkbox" id="${day}" ${isChecked ? 'checked' : ''}>
+                    </td>
+                `;
+            }
+            tableBody.appendChild(row);
+        });
+    }*/
 }
 
-window.onload = () => { loadHabits(); }
+window.onload = () => { 
+    //isChecked();
+    loadHabits(); 
+}
 
 //Toggle between dates
 let startDate = new Date(2023, 2, 3);
