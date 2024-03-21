@@ -1,5 +1,5 @@
 function showPicture() {
-    const random = Math.floor(Math.random() * 1000);
+    const random = Math.floor(Math.random() * 10);
     fetch(`https://api.unsplash.com/search/photos?query=nature`)
       .then((response) => response.json())
       .then((data) => {
@@ -8,7 +8,7 @@ function showPicture() {
         const width = containerEl.offsetWidth;
         const height = containerEl.offsetHeight;
   
-        const imgUrl = data.results[0].urls.regular;
+        const imgUrl = data.results[random].urls.regular;
         const imgEl = document.createElement('img');
         imgEl.setAttribute('src', imgUrl);
         imgEl.setAttribute('width', width);
