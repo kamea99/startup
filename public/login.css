@@ -79,7 +79,11 @@ main button {           /*submit button*/
 }
 
 .login-button {             
-    padding-top:0.7em;
+    padding-top:1.5em;
+}
+
+.create {
+    padding-top: 0.5em;
 }
 
 main a {
@@ -98,13 +102,16 @@ h1 {
 }
 
 h2 {
-    font-family: "Lucida Calligraphy", cursive;
-    color: #47573d;
-    font-size: 35px;
-    padding: 0.5em;
+    font-variant: small-caps;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #b2defc;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: -1px 0px 1px rgb(40, 101, 143);
+    padding-bottom: 0.5em
 }
 
 footer {

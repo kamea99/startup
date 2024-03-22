@@ -54,13 +54,24 @@ h1 {
 }
 
 h2 {
-    color: #516545;
+    font-variant: small-caps;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #b2defc;
+    font-size: 30px;
     font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: -1px 0px 1px rgb(40, 101, 143);
 }
 
 .container p {
-    color: #516545; 
+    color: #47573d; 
     
+}
+
+.user-input {
+    color: #47573d;
 }
 
 main{
