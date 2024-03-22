@@ -73,11 +73,39 @@ h1 {
     font-weight: bold;
 }
 
-h2 {
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: 5em;
+    line-height: 0;
+}
+
+.wel {
+    color: #47573d;
+    font-size: 50px;
+    padding: 0em;
+    margin-top: 0;
+}
+
+.to {
     color: #47573d;
     font-size: 40px;
     font-family: "Lucida Calligraphy", cursive;
-    padding: 0.7em;
+    margin: 0.2em 0;
+    padding-top: 20%;
+}
+
+.MyHabits {
+    font-variant: small-caps;
+    color: #b2defc;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: -1px 0px 2px rgb(40, 101, 143);
+    margin: 0;
+    padding-top: 25%;
 }
 
 button {
