@@ -52,3 +52,10 @@ Does this sound like you? The new year begins and you brainstorm goals to become
 - database - The database keeps track of the past inputs for the tracker, allowing the user to go back and review their progress.
 - WebSocket - There are automatic notifications given depicting a user adding a habit or updating a day. This will be replaced with WebSocket messages later.
 - application logic - The tracker shows each of the days logged and shows up with a new habit when entered.
+
+# Service Deliverable
+- Created an HTTP service using Node.js and Express
+- Frontend served up using Express static middleware
+- Calls third party service endpoints: about page calls a quote service and a photo service
+- Your backend provides service endpoints - Placeholders for login stores the current user on the server
+- Frontend calls service endpoints: done using fetch
