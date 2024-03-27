@@ -1,6 +1,6 @@
 function showPicture() {
   const random = Math.floor(Math.random() * 10);
-  fetch(`https://api.unsplash.com/search/photos?query=nature`)
+  fetch(`https://picsum.photos/v2/list?page=${random}&limit=1`)
     .then((response) => response.json())
     .then((data) => {
       const containerEl = document.querySelector('#picture');
@@ -8,11 +8,9 @@ function showPicture() {
       const width = containerEl.offsetWidth;
       const height = containerEl.offsetHeight;
 
-      const imgUrl = data.results[random].urls.regular;
+      const imgUrl = `https://picsum.photos/id/${data[0].id}/${width}/${height}`;
       const imgEl = document.createElement('img');
       imgEl.setAttribute('src', imgUrl);
-      imgEl.setAttribute('width', width);
-      imgEl.setAttribute('height', height);
       containerEl.appendChild(imgEl);
     });
 }
@@ -36,7 +34,5 @@ function showQuote() {
     });
 }
   
-document.addEventListener('DOMContentLoaded', function () {
-  showPicture();
-  showQuote();
-});
+showPicture();
+showQuote();
